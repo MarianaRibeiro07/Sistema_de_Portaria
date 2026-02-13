@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Portaria - TechZone</title>
+</head>
+
+<body>
+    <script>
+        
+        let autorizados = ["Mariana", "Joao", "Isabella", "Nicoly"];
+
+       
+        let nomeUsuario = prompt("Digite seu nome:");
+        let horaAtual = Number(prompt("Digite a hora atual (0-23):"));
+
+
+        if (autorizados.includes(nomeUsuario)) {
+            if (horaAtual < 22) {
+                alert("Acesso Permitido. Bem-vindo, " + nomeUsuario + "!");
+            } else {
+                alert("Acesso Negado: Fora do horário permitido (após as 22h).");
+            }
+        } else {
+            alert("Acesso Negado: Usuário não cadastrado.");
+        }
+    </script>
+</body>
+</html>
